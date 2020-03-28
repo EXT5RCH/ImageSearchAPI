@@ -8,7 +8,7 @@ https://a3rt.recruit-tech.co.jp/product/imageSearchAPI/
 - 学習データとして、ImageSearchAPI\modelへanimal.zipを用意しています。  
 今回DBを立ち上げない設定のため、学習データを『SearchImages.js』のMODEL_PATHへ記載したディレクトリへ展開しておく必要があります。  
 （デフォルトは「../model/animal/」）
-- CORSの関係で、実行環境により動作が異なります。 
+- CORSの関係で、自分で準備した学習データを検索する際の動作が実行環境により異なります。 
 
 |ブラウザ|Chrome|Edge|IE|
 ----|----|----|---- 
