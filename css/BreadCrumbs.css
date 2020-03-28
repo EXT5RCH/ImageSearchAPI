@@ -1,0 +1,38 @@
+.breadcrumb {
+	margin: 0;
+	padding-left: 0;
+}
+  
+.breadcrumb li {
+	display:inline-block;
+	list-style: none;
+}
+
+.breadcrumb li:first-child a:before {
+	/*家アイコン*/
+	font-family: FontAwesome;
+	content: '\f015';
+	font-weight: normal;
+	font-size: 1.1em;
+	color: #f3948f;
+  }
+
+.breadcrumb li:after {
+	font-family: FontAwesome;
+	content: '\f0da';
+	padding: 0 3px;
+	color: silver;
+
+}
+
+.breadcrumb li:last-child:after {
+	content: '';
+	padding: 0 3px;
+}
+
+.breadcrumb li a, .breadcrumb li span{
+	display: inline-block;
+	padding: 3px 10px;
+	text-decoration: none;
+	font-size: 0.9em;
+}

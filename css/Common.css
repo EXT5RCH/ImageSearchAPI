@@ -1,0 +1,48 @@
+html {
+	font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
+	font-weight: 500;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background-color:#f5f5f5;
+}
+
+.web-page-title {
+	background-color:black;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	font-weight:700;
+}
+
+.web-page-body {
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	margin: 5px;
+}
+
+.button {
+	background-color: #d3d3d3;
+}
+
+.button:hover {
+	background-color:#87ceeb;
+}
+
+.button:active {
+	box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.24);
+}
+
+hr {
+	border-top: 1px solid #bbb;
+  	border-bottom: 1px solid #fff;
+}
+
+.a3rt {
+	height: 25px;
+	float:right;
+}

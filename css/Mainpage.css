@@ -1,0 +1,27 @@
+.main-table { 
+	border: 1px black solid; 
+	height: 300px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.main-table td { 
+	border: 1px black solid;
+	background-color: white;
+	vertical-align:baseline;
+}
+
+.main-table-data a { 
+	display:block;
+	width:100%;
+	height:100%;
+	color:black;
+	font-weight:700;
+	text-decoration:none;
+	text-align: center;
+}
+
+.main-table-data a:hover{
+	background-color: #d3d3d3;
+}
+

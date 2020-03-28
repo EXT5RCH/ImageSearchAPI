@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Image Search API動作確認用Web画面</title>
+		<!--CSS-->
+		<link rel="stylesheet" href="./css/Common.css">
+		<link rel="stylesheet" href="./css/Mainpage.css">	
+	</head>
+	<!--右クリック禁止-->
+	<body oncontextmenu="return false;">
+		<div class="web-page-title">
+			<label class="header-title">トップページ</label>
+			<img src="./images/a3rt.png" class="a3rt">
+		</div>
+		<div id="web-page-body" class="web-page-body">
+			<table class="main-table" >
+				<tr class="main-table-row" >
+					<td class="main-table-data"><a href="./html/SearchImages.html">画像検索</a></td>
+					<td>
+						以下の２つのモデルを使用し、画像検索を行うことができます。<br>
+						・A3RT（アート）で準備されているモデル<br>
+						・ユーザーが作成したモデル
+					</td>
+				</tr>
+				<tr class="main-table-row">
+					<td class="main-table-data"><a href="./html/ModelImport.html">モデルインポート</a></td>
+					<td>
+						サーバへ学習データのアップロードを行います。<br>
+						注意点については<a href="javascript:open_official();">公式サイト</a>を参照してください。<br>
+					</td>
+				</tr>
+				<tr class="main-table-row">
+					<td class="main-table-data"><a href="./html/ModelCreate.html">モデル作成依頼</a></td>
+					<td>アップロードした学習データを元に、モデルの作成依頼を行います。</td>
+				</tr>
+			</table>
+		</div>
+		<!--JavaScript-->
+		<script>
+			function open_official() {
+				window.open("https://a3rt.recruit-tech.co.jp/product/imageSearchAPI/")
+			}
+		</script>
+	</body>
+</html>

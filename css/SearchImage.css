@@ -1,0 +1,55 @@
+/* masonry枠用 */
+@media screen and (max-width:800px){
+	/* SP */
+	.grid-item {
+		width: Calc(50% - 10px);
+		padding: 0 5px;
+		float: left;
+	}
+}
+@media screen and (min-width:800px){
+	/* PC用 */
+	.grid-item {
+		width: Calc(16.66% - 7px);
+		padding: 0 2.5px;
+		float: left;
+	}
+}
+.grid {
+	max-width: 100%;
+}
+.grid-item img {
+	width: 100%;
+	object-fit: contain;
+}
+/* 検索欄用 */
+#txt_message {
+	width: 90%;
+}
+/* スクロール表示用 */
+.related-word-scroll {
+	white-space:nowrap;
+	overflow: auto;
+	overflow-y: hidden;
+}
+/* 横並び表示用 */
+.div-tag-word {
+	display: inline-block;
+	padding: 10px 0;
+}
+/* 関連ワード表示デザイン用 */
+.related-word {
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+	padding: 5px;
+	margin:5px;
+}
+/* 関連ワードフォーカス時 */
+.related-word:hover {
+	background-color: #d3d3d3;
+}
+/* 関連ワード選択時 */
+.related-word:active{
+	box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.24);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>モデル作成依頼</title>
+		<!--CSS-->
+		<link rel="stylesheet" href="../css/Common.css">
+		<link rel="stylesheet" href="../css/Breadcrumbs.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body oncontextmenu="return false;">
+		<div class="web-page-title">
+			<label>モデル作成依頼</label>
+			<img src="../images/a3rt.png" class="a3rt">
+		</div>
+		<ol class="breadcrumb">
+			<li><a href="../Index.html">Topページ</a></li>
+			<li><span>モデル作成依頼</span></li>
+		</ol>
+		<hr>
+		<table class="web-page-header">
+			<tr>
+				<td><button id="btn_request" onclick="ModelCreateRequest()" class="button">依頼</button></td>
+				<td><button id="btn_reference" onclick="CreateStatusReference()" class="button">照会</button></td>
+			</tr>
+		</table>
+		<hr>
+		<div id="web-page-body" class="web-page-body">
+		</div>
+		<!--JavaScript-->
+		<script type="text/javascript" src="../js/Common.js"></script>
+		<script type="text/javascript" src="../js/APIKEY.js"></script>
+		<script type="text/javascript" src="../js/ModelCreate.js"></script>
+		<script type="text/javascript" src="../js/DisableControl.js"></script>
+	</body>
+</html>
