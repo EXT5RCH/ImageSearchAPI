@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>画像検索</title>
-		<!--CSS-->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../css/Common.css">
-		<link rel="stylesheet" href="../css/BreadCrumbs.css">
-		<link rel="stylesheet" href="../css/SearchImage.css">
-		<link rel="stylesheet" href="../css/Loading.css">
-	</head>
-	<body oncontextmenu="return false;">
-		<div id="back-loader">
-			<div class="loader">
-				<div class="inner one"></div>
-				<div class="inner two"></div>
-				<div class="inner three"></div>
-			</div>
-		</div>
-		<div class="web-page-title">
-			<label>画像検索</label>
-			<img src="../images/a3rt.png" class="a3rt">
-		</div>
-		<ol class="breadcrumb">
-			<li><a href="../Index.html">Topページ</a></li>
-			<li><span>画像検索</span></li>
-		</ol>
-		<hr>
-		<table class="web-page-header">
-			<tr>
-				<td><input type="radio" name="rdn_dft_my" id="rdn_dft" checked="checked">デフォルトモデル</td>
-				<td><input type="radio" name="rdn_dft_my" id="rdn_my" >自作モデル</td>
-				<td><input type="hidden" data-name="rdn_dft_my"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="text" id="txt_message" onkeydown="EnterTextBox(GetSearchWord)" placeholder="検索ワードを指定してください。" class="text"></td>
-				<td><button id="btn_search" onclick="GetSearchWord()" class="button">検索</button></td>
-			</tr>
-		</table>
-		<hr>
-		<div id="web-page-body" class="web-page-body">
-		</div>
-		<!--JavaScript-->
-		<script type="text/javascript" src="../js/Common.js"></script>
-		<script type="text/javascript" src="../js/APIKEY.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
-		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-		<script type="text/javascript" src="../js/SearchImages.js"></script>
-		<script type="text/javascript" src="../js/DisableControl.js"></script>
-		<script>
-			window.onload = function() {
-				let bl = document.getElementById("back-loader");
-				bl.style.visibility  = "hidden";
-			}
-		</script>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>画像検索</title>
+    <!--CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/Common.css" />
+    <link rel="stylesheet" href="../css/BreadCrumbs.css" />
+    <link rel="stylesheet" href="../css/SearchImage.css" />
+    <link rel="stylesheet" href="../css/Loading.css" />
+  </head>
+  <body oncontextmenu="return false;">
+    <div id="back-loader">
+      <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+    </div>
+    <div class="web-page-title">
+      <label>画像検索</label>
+      <img src="../images/a3rt.png" class="a3rt" />
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="../Index.html">Topページ</a></li>
+      <li><span>画像検索</span></li>
+    </ol>
+    <hr />
+    <table class="web-page-header">
+      <tr>
+        <td>
+          <input
+            type="radio"
+            name="rdn_dft_my"
+            id="rdn_dft"
+            checked="checked"
+          />デフォルトモデル
+        </td>
+        <td><input type="radio" name="rdn_dft_my" id="rdn_my" />自作モデル</td>
+        <td><input type="hidden" data-name="rdn_dft_my" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input
+            type="text"
+            id="txt_message"
+            onkeydown="EnterTextBox(GetSearchWord)"
+            placeholder="検索ワードを指定してください。"
+            class="text"
+          />
+        </td>
+        <td>
+          <button id="btn_search" onclick="GetSearchWord()" class="button">
+            検索
+          </button>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <div id="web-page-body" class="web-page-body"></div>
+    <!--JavaScript-->
+    <script type="text/javascript" src="../js/Common.js"></script>
+    <script type="text/javascript" src="../js/APIKEY.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="../js/SearchImages.js"></script>
+    <script type="text/javascript" src="../js/DisableControl.js"></script>
+    <script>
+      window.onload = function () {
+        let bl = document.getElementById("back-loader");
+        bl.style.visibility = "hidden";
+      };
+    </script>
+  </body>
 </html>
